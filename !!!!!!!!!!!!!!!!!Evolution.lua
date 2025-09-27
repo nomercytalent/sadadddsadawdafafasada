@@ -63,10 +63,10 @@ if not ok then
     antiaim()
 end
     -- === FAST gradient helpers (no per-pixel loops) ===
-local function lerp(a, b, t) return a + (b - a) * t end
-local function lerp_col(c1, c2, t)
-    return lerp(c1[1], c2[1], t), lerp(c1[2], c2[2], t), lerp(c1[3], c2[3], t), lerp(c1[4], c2[4], t)
-end
+    local function lerp(a, b, t) return a + (b - a) * t end
+    local function lerp_col(c1, c2, t)
+        return lerp(c1[1], c2[1], t), lerp(c1[2], c2[2], t), lerp(c1[3], c2[3], t), lerp(c1[4], c2[4], t)
+    end
 
 -- compatibility alias to avoid 'attempt to call global lerp_color' errors
 local function lerp_color(c1, c2, t)
